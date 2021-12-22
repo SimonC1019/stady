@@ -13,12 +13,17 @@ title = datas.find('span' , 'font_black15').text
 print(title)
 
 nums= datas.find_all('div',class_='ball_tx ball_blue')
+
+"""nums經find_all轉出的不能排序
+(X) nums.text.sort()
 """
+
+
+
 xx=[]
 for i in range(0,12):
     xx.append(nums[i].text)
-xx.sort()
+xx.sort() #內部排序
+
 print(xx)
-"""
-nums.text.sort()
-print(nums)
+ 
